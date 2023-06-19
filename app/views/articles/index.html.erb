@@ -1,7 +1,5 @@
 <h1 class="text-center mt-4">Listing all articles</h1>
 
-
-
 <div class="container">
   <p>
     <%= link_to 'Create new Article', new_article_path %>
@@ -11,7 +9,7 @@
       <div class="col-8 mt-4">
         <div class="card text-center shadow mb-5 bg-white rounded">
           <div class="card-header font-italic">
-            Featured
+            by <%= article.user.username if article.user %>
           </div>
           <div class="card-body">
             <h5 class="card-title"><%= link_to article.title, article_path(article), class: "text-success" %></h5>
