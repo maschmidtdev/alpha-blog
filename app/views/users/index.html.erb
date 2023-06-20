@@ -1,5 +1,10 @@
 <h1 class="text-center mt-4">Alpha Bloggers</h1>
 
+<div class="flickr_pagination">
+  <%= will_paginate @users, :container => false %>
+</div>
+
+
 <div class="container">
   <p>
     <%= link_to 'Create new Article', new_article_path %>
@@ -27,4 +32,8 @@
       </div>
     </div>
   <% end %>
+</div>
+
+<div class="flickr_pagination mb-3">
+  <%= will_paginate @users, :container => false %>
 </div>
